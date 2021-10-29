@@ -8,6 +8,8 @@
 
 body {
     scroll-behavior: smooth;
+    font-family: "Irish Grover", cursive;
+
 }
 
 /* HEADER */
@@ -160,4 +162,84 @@ nav ul li a:active {
 
 .card div {
     height: 50%;
+}
+.card-text {
+font-size: 25px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+footer {
+    color: rgb(240, 227, 202);
+    background-color: #1b1a17;
+    height: 40vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-text {
+    display: flex;
+    flex-direction: row;
+
+}
+.contact-info-container {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info-container h2 {
+    font-size: 40px;
+}
+.contact {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.Opening-hours-container {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    
+}
+.Opening-hours-container h1 {
+    font-size: 60px;
+}
+.Opening-hours-container h2 {
+    border-bottom: 3px solid rgb(240, 227, 202);
+    padding-bottom: 6px;
+
+}
+.hour-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.media-container{
+   font-size: 30px;
+   display: flex;
+   flex-direction: row;
+width: 20%;
+
+
+   
+}
+.media-container p {
+    padding: 10px;
+
+}
+.media-container a {
+    color: #ff8303; 
+}
+.media-container a:hover {
+    color: #f3a75c;
 }
