@@ -5,9 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    scroll-behavior: smooth;
     font-family: "Irish Grover", cursive;
 
 }
@@ -80,6 +82,23 @@ nav ul li a:active {
     width: 100%;
     background-image: url(../img/landing.jpg);
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing-image-container h2{
+    font-size: 90px;
+    color: rgb(240, 227, 202);
+    z-index: 2;
+}
+.landing-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* GALLERY */

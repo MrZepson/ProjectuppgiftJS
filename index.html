@@ -15,14 +15,18 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Staff</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#staff">Staff</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="landing-image-container"></main>
-        <div class="gallery-container">
+        <main class="landing-image-container" id="home">
+            <h2>
+                Welcome!
+            </h2>
+        </main>
+        <div class="gallery-container" id="gallery">
             <div class="gallery-flex">
                 <img
                     id="image1"
@@ -71,7 +75,7 @@
             </div>
         </div>
         <div class="parallax"></div>
-        <div class="card-container">
+        <div class="card-container" id="staff">
             <div class="card">
                 <img src="./img/s1.jpg" alt="" />
                 <div class="card-text">
