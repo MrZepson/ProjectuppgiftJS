@@ -162,6 +162,10 @@ nav ul li a:active {
         border: 1px solid #888;
         width: 80%;
   }
+  .thumbnail{
+      height: 40px;
+      width: 40px;
+  }
   
 
 /* PARALLAX */
