@@ -2,7 +2,7 @@
 var modal = document.getElementById("gallery-modal");
 var btn = document.getElementById("gallery-flex");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }
 
 //*Modal inner
