@@ -189,6 +189,17 @@ nav li a:active {
     flex-direction: row;
     
 }
+#image-container {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.thumbnail {
+    height: 40px;
+    width: 40px;
+}
 
 .thumbnail {
     width: 50px;
