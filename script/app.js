@@ -6,6 +6,8 @@ btn.onclick = function() {
 }
 
 //*Modal inner
+
+//* Array of pictures to use later, for main-picture and thumbnails.
 const images = [
     {
       name: "pexels-chitokan-2087748.jpg",
@@ -27,7 +29,8 @@ const images = [
     },
   ];
 
- 
+
+//*  
 const setMainImage = (src) => {
   document.getElementById("main-image").setAttribute("src", src);
   setActiveThumbNail();
