@@ -40,7 +40,7 @@ const setActiveThumbNail = () => {
   const thumbs = document.getElementsByClassName("thumbnail");
   for (let i = 0; i < thumbs.length; i++) {
     if (thumbs[i].src === document.getElementById("main-image").src) {
-      thumbs[i].style.border = "2px solid red";
+      thumbs[i].style.border = "3px solid #ff8303";
     } else {
       thumbs[i].style.border = "0px";
     }
