@@ -182,19 +182,70 @@ nav li a:active {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
-#image-container {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+#image-section {
+    display: flex;
+    flex-direction: row;
+    
 }
+
 .thumbnail {
-    height: 40px;
-    width: 40px;
-}
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  #thumbnails-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    background-color: #acacac;
+  }
+  
+  #main-image {
+    width: 10%;
+    height: 60vh;
+    object-fit: cover;
+    border-bottom: 8px solid #ff8303;
+  }
+  
+  .main-image-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    height: 60vh;
+  }
+  
+  #prev-btn,
+  #next-btn {
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #prev-btn:hover,
+  #next-btn:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  #prev-btn {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  #next-btn {
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 
 /* PARALLAX */
 .parallax {
