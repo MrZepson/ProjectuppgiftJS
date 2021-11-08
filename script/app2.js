@@ -44,7 +44,7 @@ const staff = [
         name: "Name1",
         role: "Chef",
         img: "s1.jpg",
-        info() { 
+        info() {
             return `This is information about ${this.name}, the ${this.role}`;
         },
     },
@@ -52,7 +52,7 @@ const staff = [
         name: "Name2",
         role: "Head-Chef",
         img: "s2ny.jpeg",
-        info() { 
+        info() {
             return `This is information about ${this.name}, the ${this.role}`;
         },
     },
@@ -60,7 +60,7 @@ const staff = [
         name: "Name3",
         role: "Chef",
         img: "s3ny.jpg",
-        info() { 
+        info() {
             return `This is information about ${this.name}, the ${this.role}`;
         },
     },
@@ -96,7 +96,6 @@ const closeCardModal = (e) => {
     }
 };
 
-
 // Making sure the website is loaded before any events are executed
 window.addEventListener("load", () => {
     // Cross onClick event (closes it)
@@ -105,4 +104,3 @@ window.addEventListener("load", () => {
     // Calling the function that opens the card-modal
     openCardModal();
 });
-
