@@ -17,6 +17,12 @@ btns.forEach(btn => {
 
 });
 
+
+modal.onclick = function(closing) {
+  if (closing.target == modal) {
+    modal.style.display = "none";
+  }
+}
 //*Modal inner
 
 //* Array of pictures to use later, for main-picture and thumbnails.
