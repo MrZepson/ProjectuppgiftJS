@@ -1,9 +1,14 @@
 //*OnCLick
-var modal = document.getElementById("gallery-modal");
-var btn = document.getElementById("gallery-flex");
-btn.onclick = function() {
-  modal.style.display = "flex";
-}
+ let modal = document.getElementById("gallery-modal");
+ let btns = document.querySelectorAll(".gallery-flex");
+
+btns.forEach(btn => {
+
+   btn.addEventListener('click', ()=> {
+    modal.style.display = "flex";
+   });
+
+});
 
 //*Modal inner
 
