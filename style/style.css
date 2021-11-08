@@ -233,7 +233,7 @@ nav li a:active {
 }
 
 #prev-btn:hover,
-#next-btn:hover
+#next-btn:hover,
 #close-btn:hover {
     background-color: black;
     color: #ff8303;
