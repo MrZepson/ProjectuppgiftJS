@@ -1,6 +1,13 @@
 //*OnCLick
  let modal = document.getElementById("gallery-modal");
  let btns = document.querySelectorAll(".gallery-flex");
+ var closeBtn = document.getElementById("close-btn");
+
+
+
+ closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
 
 btns.forEach(btn => {
 

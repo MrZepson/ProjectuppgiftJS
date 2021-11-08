@@ -233,7 +233,8 @@ nav li a:active {
 }
 
 #prev-btn:hover,
-#next-btn:hover {
+#next-btn:hover
+#close-btn:hover {
     background-color: black;
     color: #ff8303;
 }
@@ -250,6 +251,18 @@ nav li a:active {
     border-bottom-left-radius: 5px;
 }
 
+#close-btn {
+    position:absolute;
+    top:0;
+    right:0;
+    color: black;
+    background-color: #ff8303;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-bottom-left-radius: 5px;
+   }
+ 
 /* PARALLAX */
 .parallax {
     height: 35vh;
