@@ -1,7 +1,11 @@
-//*OnCLick
-let modal = document.getElementById("gallery-modal");
-let btns = document.querySelectorAll(".gallery-flex");
-var closeBtn = document.getElementById("close-btn");
+//OnCLick 
+const modal = document.getElementById("gallery-modal");
+const btns = document.querySelectorAll(".gallery-flex");
+const closeBtn = document.getElementById("close-btn");
+
+//Modal inner
+
+// Array of pictures to use later, for main-picture and thumbnails.
 const images = [
     {
         name: "pexels-los-muertos-crew-7613568.jpg",
@@ -22,7 +26,7 @@ const images = [
         name: "pexels-sabel-blanco-3073970.jpg",
     },
 ];
-
+//Function to close (display none)
 closeBtn.onclick = function () {
     modal.style.display = "none";
 };
@@ -43,11 +47,7 @@ btns.forEach((img, index) => {
     });
 });
 
-//*Modal inner
 
-//* Array of pictures to use later, for main-picture and thumbnails.
-
-//*
 const setMainImage = (src) => {
     document.getElementById("main-image").setAttribute("src", src);
     setActiveThumbNail();
