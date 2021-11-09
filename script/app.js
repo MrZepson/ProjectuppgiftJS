@@ -36,12 +36,13 @@ modal.onclick = function (closing) {
         modal.style.display = "none";
     }
 };
-// Function that sets right picture when clicked on.
+
+// Function that sets right picture when clicked on as main and open modal
 btns.forEach((img, index) => {
-// when click on display flex (get visible).     
+// when clicked on display flex (get visible).     
     img.addEventListener("click", () => {
         modal.style.display = "flex";
-//set main image src to ./img/ & the rest of the src is depending on witch index the picture clicked on.
+//set main image src to ./img/ & the rest of the src is gets the same src as the picture with that clicked on.
         document 
             .querySelector("#main-image")
             .setAttribute("src", `./img/${images[index].name}`);
