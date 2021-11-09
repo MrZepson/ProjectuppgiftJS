@@ -1,3 +1,4 @@
+/*
 // Responsive Nav-Bar
 // Variables
 const burgerButton = document.querySelector("#burger");
@@ -104,3 +105,4 @@ window.addEventListener("load", () => {
     // Calling the function that opens the card-modal
     openCardModal();
 });
+*/
