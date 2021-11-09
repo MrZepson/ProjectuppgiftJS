@@ -42,7 +42,7 @@ btns.forEach((img, index) => {
 // when clicked on display flex (get visible).     
     img.addEventListener("click", () => {
         modal.style.display = "flex";
-//set main image src to ./img/ & the rest of the src is gets the same src as the picture with that clicked on.
+//set main image src to ./img/ & the rest of the src it gets the same src as the picture with that index clicked on.
         document 
             .querySelector("#main-image")
             .setAttribute("src", `./img/${images[index].name}`);
