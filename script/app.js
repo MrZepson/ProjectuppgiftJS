@@ -50,13 +50,6 @@ btns.forEach((img, index) => {
     });
 });
 
-/*making the function for setting the main image, the parameter (src) is set futher down in the part whit id thumbnail-wrapper
-so the main image gets the same src as the thumbnail image thar we curent clicked on or used arrow next or prev arrow that are set futher down*/
-const setMainImage = (src) => {
-    document.getElementById("main-image").setAttribute("src", src);
-    setActiveThumbNail();
-};
-
 // A arrow function to style the active Thumbnail
 const setActiveThumbNail = () => {
 // To make it posible to loop over the thumbnails we get the al the elements whit the class name thumbnail
