@@ -151,7 +151,7 @@ const staff = [
     {
         name: "Name1",
         role: "Chef",
-        img: "s1.jpg",
+        img: "skull1.png",
         info() {
             return `This is information about ${this.name}, the ${this.role}`;
         },
@@ -159,7 +159,7 @@ const staff = [
     {
         name: "Name2",
         role: "Head-Chef",
-        img: "s2ny.jpeg",
+        img: "skull2.png",
         info() {
             return `This is information about ${this.name}, the ${this.role}`;
         },
@@ -167,7 +167,7 @@ const staff = [
     {
         name: "Name3",
         role: "Chef",
-        img: "s3ny.jpg",
+        img: "skull3.png",
         info() {
             return `This is information about ${this.name}, the ${this.role}`;
         },
