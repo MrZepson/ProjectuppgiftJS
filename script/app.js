@@ -106,14 +106,14 @@ window.addEventListener("load", () => {
     document.getElementById("next-btn").addEventListener("click", nextImage);
 });
 
-// Responsive Nav-Bar
+// Responsive Nav-Bar code
 // Variables
 const burgerButton = document.querySelector("#burger");
 const navbar = document.querySelector("#nav-bar");
 const links = document.querySelectorAll(".nav-link");
 let menuOpen = false;
 
-// Function that puts a "click"-event on the burger-button
+// Function that opens and closes the navigation menu
 const toggleBurgerMenu = () => {
     if (!menuOpen) {
         navbar.style.right = "0";
@@ -133,10 +133,8 @@ const closeOnLinkClick = () => {
 
 // Making sure the website has loaded before any events can happen
 window.addEventListener("load", () => {
-    // adding the event on burger-button to toggle the menu-function
-    burgerButton.addEventListener("click", toggleBurgerMenu);
-    // calling the function that closes the menu on link-click
-    closeOnLinkClick();
+    burgerButton.addEventListener("click", toggleBurgerMenu); // adding the event on burger-button to toggle the menu-function
+    closeOnLinkClick(); // calling the function that closes the menu on link-click
 });
 
 // Card modal code
@@ -177,9 +175,12 @@ const staff = [
 // Opens and puts in the correct information to the card-modal
 const openCardModal = () => {
     const readMore = document.querySelectorAll(".card-text p");
+    // putting a click-event on each card that opens up a modal with more information
     readMore.forEach((card, index) => {
         card.addEventListener("click", () => {
             cardModalWrapper.style.display = "flex";
+            // looping through the staff-array and looking if the card-index and the array-index matches
+            // if so it will generate the correct img, role and information on the modal
             for (let i = 0; i < staff.length; i++) {
                 if (index === i) {
                     imgContent.innerHTML = `<img class="modal-img" src="./img/${staff[i].img}" />`;
@@ -194,6 +195,7 @@ const openCardModal = () => {
 
 // Closes the card modal when the cross is clicked
 const closeCardModal = (e) => {
+    // if what I click on matches what this event this function is put on, it will close the modal
     if (e.target !== e.currentTarget) {
         return;
     }
@@ -206,9 +208,7 @@ const closeCardModal = (e) => {
 
 // Making sure the website is loaded before any events are executed
 window.addEventListener("load", () => {
-    // Cross onClick event (closes it)
-    modalCross.addEventListener("click", closeCardModal);
-    cardModalWrapper.addEventListener("click", closeCardModal);
-    // Calling the function that opens the card-modal
-    openCardModal();
+    modalCross.addEventListener("click", closeCardModal); // cross onClick event (closes the modal)
+    cardModalWrapper.addEventListener("click", closeCardModal); // modal-wrapper onClick event (closes the modal)
+    openCardModal(); // calling the function that opens the card-modal
 });

@@ -252,17 +252,17 @@ nav li a:active {
 }
 
 #close-btn {
-    position:absolute;
-    top:0;
-    right:0;
+    position: absolute;
+    top: 0;
+    right: 0;
     color: black;
     background-color: #ff8303;
     padding: 10px;
     cursor: pointer;
     transition: 0.5s;
     border-bottom-left-radius: 5px;
-   }
- 
+}
+
 /* PARALLAX */
 .parallax {
     height: 35vh;
@@ -308,7 +308,7 @@ nav li a:active {
     font-size: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
