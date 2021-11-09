@@ -1,4 +1,4 @@
-//OnCLick 
+// functions stated futher down
 const modal = document.getElementById("gallery-modal");
 const btns = document.querySelectorAll(".gallery-flex");
 const closeBtn = document.getElementById("close-btn");
@@ -26,47 +26,59 @@ const images = [
         name: "pexels-sabel-blanco-3073970.jpg",
     },
 ];
-//Function to close (display none)
+//Onclick Function to close (display none) on X button
 closeBtn.onclick = function () {
     modal.style.display = "none";
 };
-
+//Onclick function to close (display none) on outside of gallery modal
 modal.onclick = function (closing) {
     if (closing.target == modal) {
         modal.style.display = "none";
     }
 };
-
+// Function that sets right picture when clicked on.
 btns.forEach((img, index) => {
+// when click on display flex (get visible).     
     img.addEventListener("click", () => {
         modal.style.display = "flex";
-        document
+//set main image src to ./img/ & the rest of the src is depending on witch index the picture clicked on.
+        document 
             .querySelector("#main-image")
             .setAttribute("src", `./img/${images[index].name}`);
         setActiveThumbNail();
     });
 });
 
-
+/*making the function for setting the main image, the parameter (src) is set futher down in the part whit id thumbnail-wrapper
+so the main image gets the same src as the thumbnail image thar we curent clicked on or used arrow next or prev arrow that are set futher down*/
 const setMainImage = (src) => {
     document.getElementById("main-image").setAttribute("src", src);
     setActiveThumbNail();
 };
 
+// A arrow function to style the active Thumbnail
 const setActiveThumbNail = () => {
+// To make it posible to loop over the thumbnails we get the al the elements whit the class name thumbnail
     const thumbs = document.getElementsByClassName("thumbnail");
+// The for loop checks that as long as i is lesser than the number of objects in the thumbs array and i will increase with 1 so the array dont continue to loop forever.  
     for (let i = 0; i < thumbs.length; i++) {
+//if thums src are the same as main-image src- style border          
         if (thumbs[i].src === document.getElementById("main-image").src) {
             thumbs[i].style.border = "3px solid #ff8303";
+//else dont style border            
         } else {
             thumbs[i].style.border = "0px";
         }
     }
 };
 
-const prevImage = () => {
+//a arrow function to get the previous image in the thumbs array to show
+const beforeBtn = () => {
     const thumbs = document.getElementsByClassName("thumbnail");
+// a for loop that states that as long as i is lesser  than the number of objects in the thumbs array and i will increase with 1 so the array dont continue to loop forever.    
     for (let i = 0; i < thumbs.length; i++) {
+/* if thumbs i src are the same as main-image get the main image and set src attrinute to the previous (-=1)
+ src in the thumbs array and if i is less than 0 it dont do anything*/        
         if (
             thumbs[i].src === document.getElementById("main-image").src &&
             i !== 0
@@ -74,36 +86,50 @@ const prevImage = () => {
             document
                 .getElementById("main-image")
                 .setAttribute("src", thumbs[(i -= 1)].src);
-            setActiveThumbNail();
+// And cal set active thumbnail to get the style on active thumbnail , the function is stated futher up.
+                setActiveThumbNail();
         }
     }
 };
 
-const nextImage = () => {
+// same as beforeBtn untill the if
+const nextBtn = () => {
     const thumbs = document.getElementsByClassName("thumbnail");
     for (let i = 0; i < thumbs.length; i++) {
+/* if thumbs i src are the same as main-imageget the main image and set src attrinute to the next (i +=1)
+ src in the thumbs array and if i is greater than the numer of object in thums.length -1 (since the first index number is 0) and if so dont do anything  */
         if (
             thumbs[i].src === document.getElementById("main-image").src &&
             i !== thumbs.length - 1
         ) {
             document
-                .getElementById("main-image")
+                .getElementById("main-image") 
                 .setAttribute("src", thumbs[(i += 1)].src);
+
+// And call set active thumbnail to get the style on active thumbnail , the function is stated futher up.    
             setActiveThumbNail();
         }
     }
 };
 
+//check if the it has loaded an then with a arrow function to set and target thumbnails-wrapper
 window.addEventListener("load", () => {
+//target the thumbnail wrapper in html to fill it with the images in the images array    
     document.getElementById("thumbnails-wrapper").innerHTML = images
+    /*.map iterate over the images array and makes a new array with the path (img map) and the img name in the array, so it becomes a array of the images.
+ to get the css it has the class "thumbnail" and a onclick event thats explaind futher up and a argument (this.src) so we can use this src in the function */
         .map(
             (img) =>
                 `<img src="./img/${img.name}" class="thumbnail" onclick="setMainImage(this.src)">`
         )
+//To delete the commas that exist because its a arry, we use .join to make it a string instead of an array   
         .join("");
+//To immediately style the active thumbnail, we cal the function setActiveThumnail that are set futher up
     setActiveThumbNail();
-    document.getElementById("prev-btn").addEventListener("click", prevImage);
-    document.getElementById("next-btn").addEventListener("click", nextImage);
+/*First get the element id from html prev-btm and next-btn and then using a eventlistener to "listen" afer a click
+and when detecting a click run the beforeBtn or nextBtn funcion that ar set futher up*/
+    document.getElementById("prev-btn").addEventListener("click", beforeBtn);
+    document.getElementById("next-btn").addEventListener("click", nextBtn);
 });
 
 // Responsive Nav-Bar code
