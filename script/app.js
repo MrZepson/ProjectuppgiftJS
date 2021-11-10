@@ -50,10 +50,6 @@ btns.forEach((img, index) => {
     });
 });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8ae5e6e22f86e732b31357150e0132754a310b20
 // A arrow function to style the active Thumbnail
 const setActiveThumbNail = () => {
 // To make it posible to loop over the thumbnails we get the al the elements whit the class name thumbnail

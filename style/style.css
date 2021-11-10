@@ -320,6 +320,20 @@ nav li a:active {
 .card-text p:hover {
     transform: scale(1.15);
 }
+
+@media screen and (max-width: 800px) {
+    .card-container {
+        flex-direction: column;
+        height: 120vh;
+    }
+    .card {
+        width: 70%;
+        height: 35vh;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
 /* CARD MODAL */
 .card-modal-wrapper {
     height: 100vh;
@@ -365,6 +379,8 @@ nav li a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #img-wrapper,
@@ -386,7 +402,7 @@ nav li a:active {
 }
 
 #info-wrapper h2 {
-    height: 50%;
+    height: 35%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -395,10 +411,32 @@ nav li a:active {
 }
 
 #info-wrapper p {
-    height: 50%;
+    height: 65%;
     width: 100%;
     font-size: 20px;
-    margin: 20px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .card-modal {
+        height: 80vh;
+        width: 90%;
+    }
+    .card-modal-content {
+        flex-direction: column;
+    }
+    #img-wrapper {
+        width: 70%;
+    }
+    #info-wrapper {
+        width: 90%;
+    }
+    #info-wrapper h2 {
+        font-size: 50px;
+    }
+    #info-wrapper p {
+        font-size: 30px;
+    }
 }
 /* FOOTER */
 footer {
@@ -467,20 +505,20 @@ footer {
     color: #f3a75c;
 }
 @media screen and (max-width: 800px) {
-    footer{
+    footer {
         display: block;
         height: auto;
     }
-    .contact-info-container{
+    .contact-info-container {
         width: 100%;
     }
-    .contact-info-container h2{
-       font-size: 68px;
+    .contact-info-container h2 {
+        font-size: 68px;
     }
-    .footer-text{
+    .footer-text {
         flex-direction: column;
     }
-    .contact{
+    .contact {
         padding: 6px;
         text-align: center;
     }
@@ -488,20 +526,20 @@ footer {
         font-size: 30px;
     }
     .contact p {
-            font-size: 20px;
+        font-size: 20px;
     }
-    .Opening-hours-container{
+    .Opening-hours-container {
         padding-top: 25px;
         padding-bottom: 10px;
         width: 100%;
     }
-    .Opening-hours-container h1{
+    .Opening-hours-container h1 {
         display: none;
     }
-    .Opening-hours-container h2{
+    .Opening-hours-container h2 {
         font-size: 40px;
     }
-    .media-container p{
+    .media-container p {
         font-size: 45px;
         padding: 12px;
     }
