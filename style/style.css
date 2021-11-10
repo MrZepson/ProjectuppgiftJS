@@ -471,6 +471,12 @@ footer {
         display: block;
         height: auto;
     }
+    .contact-info-container{
+        width: 100%;
+    }
+    .contact-info-container h2{
+       font-size: 68px;
+    }
     .footer-text{
         flex-direction: column;
     }
@@ -478,13 +484,21 @@ footer {
         padding: 6px;
         text-align: center;
     }
-    .contact-info-container{
-        width: 100%;
+    .contact h3 {
+        font-size: 30px;
+    }
+    .contact p {
+            font-size: 20px;
     }
     .Opening-hours-container{
+        padding-top: 25px;
+        padding-bottom: 10px;
         width: 100%;
     }
     .Opening-hours-container h1{
         display: none;
+    }
+    .Opening-hours-container h2{
+        font-size: 40px;
     }
 }
