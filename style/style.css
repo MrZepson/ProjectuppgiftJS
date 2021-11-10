@@ -466,3 +466,25 @@ footer {
 .media-container a:hover {
     color: #f3a75c;
 }
+@media screen and (max-width: 800px) {
+    footer{
+        display: block;
+        height: auto;
+    }
+    .footer-text{
+        flex-direction: column;
+    }
+    .contact{
+        padding: 6px;
+        text-align: center;
+    }
+    .contact-info-container{
+        width: 100%;
+    }
+    .Opening-hours-container{
+        width: 100%;
+    }
+    .Opening-hours-container h1{
+        display: none;
+    }
+}
