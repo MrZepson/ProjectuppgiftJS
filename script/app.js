@@ -82,7 +82,15 @@ const beforeBtn = () => {
                 .setAttribute("src", thumbs[(i -= 1)].src);
 // And cal set active thumbnail to get the style on active thumbnail , the function is stated futher up.
                 setActiveThumbNail();
+        } else if (thumbs[i].src === document.getElementById("main-image").src &&
+        i === 0) {
+            document
+            .getElementById("main-image")
+            .setAttribute("src", thumbs[i += thumbs.length - 1].src);
+// And cal set active thumbnail to get the style on active thumbnail , the function is stated futher up.
+            setActiveThumbNail();
         }
+        
     }
 };
 
@@ -102,6 +110,16 @@ const nextBtn = () => {
 
 // And call set active thumbnail to get the style on active thumbnail , the function is stated futher up.    
             setActiveThumbNail();
+        } else if (
+            thumbs[i].src === document.getElementById("main-image").src &&
+            i === thumbs.length - 1
+        ){ document
+            .getElementById("main-image") 
+            .setAttribute("src", thumbs[0].src);
+
+// And call set active thumbnail to get the style on active thumbnail , the function is stated futher up.    
+        setActiveThumbNail();
+
         }
     }
 };
