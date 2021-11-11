@@ -162,8 +162,10 @@ nav li a:active {
     width: 100%;
     box-shadow: 0px 0px 10px black;
 }
-.test, .test2 {
-    padding: 10px;
+.three-images-container {
+    padding: 15px;
+
+ 
 }
 .image-23-container,
 .image-56-container {
