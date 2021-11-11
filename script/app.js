@@ -26,8 +26,6 @@ const images = [
         name: "pexels-sabel-blanco-3073970.jpg",
     },
 ];
-
-
 //Onclick Function to close (display none) on X button
 closeBtn.onclick = function () {
     modal.style.display = "none";
@@ -52,11 +50,6 @@ btns.forEach((img, index) => {
     });
 });
 
-//click on thumbnails to change main-img 
-const setMainImage = (src) => {
-    document.getElementById("main-image").setAttribute("src", src);
-    setActiveThumbNail();
-  };
 // A arrow function to style the active Thumbnail
 const setActiveThumbNail = () => {
 // To make it posible to loop over the thumbnails we get the al the elements whit the class name thumbnail
