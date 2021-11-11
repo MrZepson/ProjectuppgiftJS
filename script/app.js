@@ -37,6 +37,12 @@ modal.onclick = function (closing) {
     }
 };
 
+//click on thumbnails to change main-img 
+const setMainImage = (src) => {
+    document.getElementById("main-image").setAttribute("src", src);
+    setActiveThumbNail();
+  };
+
 // Function that sets right picture when clicked on as main and open modal
 btns.forEach((img, index) => {
 // when clicked on display flex (get visible).     
