@@ -88,6 +88,7 @@ const beforeBtn = () => {
                 .setAttribute("src", thumbs[(i -= 1)].src);
 // And cal set active thumbnail to get the style on active thumbnail , the function is stated futher up.
                 setActiveThumbNail();
+//else if same as if, but instead if i is equal to 0 set main image to thumb length -1 whitch is the last picture in the array. 
         } else if (thumbs[i].src === document.getElementById("main-image").src &&
         i === 0) {
             document
@@ -116,6 +117,7 @@ const nextBtn = () => {
 
 // And call set active thumbnail to get the style on active thumbnail , the function is stated futher up.    
             setActiveThumbNail();
+////else if same as if, but instead if i is equal to thumbs.length -1 (last picture inarray) set main image to thumb src 0, first picture in the array             
         } else if (
             thumbs[i].src === document.getElementById("main-image").src &&
             i === thumbs.length - 1
